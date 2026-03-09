@@ -377,8 +377,8 @@ footer{background:var(--black);color:var(--text);padding:3.5rem 3.5rem 2rem}
 <!-- VISITOR BANNER -->
 <div id="vbanner">
   <span class="vb-lbl">I am looking for:</span>
-  <a href="#book" class="vb-btn vb-c">🏠 Home Staff / Cleaning</a>
-  <a href="#careers" class="vb-btn vb-j">💼 A Job in Qatar</a>
+  <button onclick="openModal('book')" class="vb-btn vb-c">🏠 Home Staff / Cleaning</button>
+  <button onclick="openModal('apply')" class="vb-btn vb-j">💼 A Job in Qatar</button>
 </div>
 
 <!-- NAV -->
@@ -394,8 +394,8 @@ footer{background:var(--black);color:var(--text);padding:3.5rem 3.5rem 2rem}
     <li><a href="#reviews">Reviews</a></li>
   </ul>
   <div class="nav-cta">
-    <a href="#book" class="nav-btn nav-btn-client">🏠 Book Now</a>
-    <a href="#careers" class="nav-btn nav-btn-hire">💼 Join Us</a>
+    <button onclick="openModal('book')" class="nav-btn nav-btn-client">🏠 Book Now</button>
+    <button onclick="openModal('apply')" class="nav-btn nav-btn-hire">💼 Join Us</button>
   </div>
   <button class="hamburger" onclick="openMob()" aria-label="Menu">
     <span></span><span></span><span></span>
@@ -418,6 +418,7 @@ footer{background:var(--black);color:var(--text);padding:3.5rem 3.5rem 2rem}
       <li><a href="#homestaff" onclick="closeMob()">👩‍🍳 Home Staff</a></li>
       <li><a href="#why" onclick="closeMob()">⭐ Why Choose Us</a></li>
       <li><a href="#reviews" onclick="closeMob()">💬 Reviews</a></li>
+      <li><a href="#overseas" onclick="closeMob()">📢 We Are Hiring</a></li>
       <li><a href="#quote" onclick="closeMob()">📋 Free Quote</a></li>
     </ul>
 
@@ -442,8 +443,8 @@ footer{background:var(--black);color:var(--text);padding:3.5rem 3.5rem 2rem}
 
     <!-- CTA buttons -->
     <div class="mob-cta">
-      <a href="#book" class="nav-btn nav-btn-client" onclick="closeMob()" style="text-align:center;padding:.75rem">🏠 Book Now</a>
-      <a href="#careers" class="nav-btn nav-btn-hire" onclick="closeMob()" style="text-align:center;padding:.75rem">💼 Join Us</a>
+      <button onclick="closeMob();openModal('book')" class="nav-btn nav-btn-client" style="text-align:center;padding:.75rem">🏠 Book Now</button>
+      <button onclick="closeMob();openModal('apply')" class="nav-btn nav-btn-hire" style="text-align:center;padding:.75rem">💼 Join Us</button>
     </div>
   </div>
 </div>
@@ -455,8 +456,8 @@ footer{background:var(--black);color:var(--text);padding:3.5rem 3.5rem 2rem}
     <h1 class="hero-title reveal">YOUR HOME,<br><span class="accent">PERFECTLY</span><br>CARED FOR</h1>
     <p class="hero-sub reveal">Professional housemaids, nannies and cleaning services across Qatar — vetted, trained and ready to serve your family.</p>
     <div class="hero-btns reveal">
-      <a href="#book" class="btn-primary">Book a Service</a>
-      <a href="#quote" class="btn-ghost">Get Free Quote</a>
+      <button onclick="openModal('book')" class="btn-primary">Book a Service</button>
+      <button onclick="openModal('quote')" class="btn-ghost">Get Free Quote</button>
     </div>
     <div class="reveal" style="margin-top:1.1rem">
       <button onclick="openListing('job')" style="display:inline-flex;align-items:center;gap:.55rem;padding:.62rem 1.5rem;border-radius:100px;background:rgba(37,211,102,.15);border:1.5px solid rgba(37,211,102,.45);color:#7ae89a;font-family:'DM Sans',sans-serif;font-size:.82rem;font-weight:700;cursor:pointer;backdrop-filter:blur(18px);transition:all .3s;box-shadow:0 4px 18px rgba(0,0,0,.3)" onmouseover="this.style.background='rgba(37,211,102,.28)';this.style.transform='translateY(-2px)'" onmouseout="this.style.background='rgba(37,211,102,.15)';this.style.transform='none'">💼 View Job Listings</button>
@@ -629,7 +630,6 @@ footer{background:var(--black);color:var(--text);padding:3.5rem 3.5rem 2rem}
       <div style="margin-top:1.8rem;padding:1.1rem;background:rgba(37,211,102,.06);border:1px solid rgba(37,211,102,.2);border-radius:11px">
         <div style="font-size:.75rem;color:var(--muted);margin-bottom:.4rem">📱 Direct WhatsApp</div>
         <a href="https://wa.me/97450928969" target="_blank" style="color:#25d366;font-weight:700;text-decoration:none;font-size:.88rem;display:block">+974 50928969</a>
-        <a href="https://wa.me/97451354556" target="_blank" style="color:#25d366;font-weight:700;text-decoration:none;font-size:.88rem;display:block;margin-top:.2rem">+974 51354556</a>
       </div>
     </div>
   </div>
@@ -651,6 +651,88 @@ footer{background:var(--black);color:var(--text);padding:3.5rem 3.5rem 2rem}
     <div class="rev-card reveal"><div class="stars">★★★★★</div><p class="rev-text">What makes Santro Doha special is how they care about matching the right person. Our housemaid has been with us 8 months and we couldn't be happier.</p><div class="reviewer"><div class="rev-av">YA</div><div><div class="rev-name">Yousef A**</div><div class="rev-loc">Live-In Housemaid · Lusail City 🇶🇦</div></div></div></div>
     <div class="rev-card reveal"><div class="stars">★★★★★</div><p class="rev-text">The best cleaning company in Qatar. Our office was cleaned to an incredibly high standard. Staff were friendly and finished ahead of schedule.</p><div class="reviewer"><div class="rev-av">SA</div><div><div class="rev-name">Salma A*</div><div class="rev-loc">Office Cleaning · C-Ring Road 🇶🇦</div></div></div></div>
     <div class="rev-card reveal"><div class="stars">★★★★★</div><p class="rev-text">We have been clients of Santro Doha for over a year. Every interaction has been professional. Our live-in nanny is brilliant and our children are so happy.</p><div class="reviewer"><div class="rev-av">OA</div><div><div class="rev-name">Omar &amp; Fatima A*</div><div class="rev-loc">Live-In Nanny · Umm Salal 🇶🇦</div></div></div></div>
+  </div>
+</section>
+
+<!-- OVERSEAS HIRING -->
+<section id="overseas" style="background:linear-gradient(160deg,#0a1218 0%,#021825 50%,#0a1218 100%);padding:5rem 3.5rem;position:relative;overflow:hidden">
+  <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,rgba(201,150,58,.7),transparent)"></div>
+  <div style="text-align:center;margin-bottom:3rem">
+    <div class="hero-badge reveal" style="background:rgba(201,150,58,.1);border-color:rgba(201,150,58,.3);color:var(--gold2);margin:0 auto 1rem">📢 We Are Hiring</div>
+    <h2 class="section-title reveal" style="color:#fff;text-align:center">Join Santro Doha — Full-Time</h2>
+    <p class="section-sub reveal" style="margin:0 auto;text-align:center">2-Year Contract · Under Qatari Labor Law · Open for Local &amp; Overseas Applicants</p>
+    <div style="display:inline-flex;align-items:center;gap:.5rem;background:rgba(201,150,58,.12);border:1px solid rgba(201,150,58,.35);border-radius:100px;padding:.4rem 1.2rem;margin-top:.8rem;font-size:.78rem;color:var(--gold2);font-weight:700">📍 Open For: Female Applicants Only · Filipino Nationality</div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.8rem;max-width:860px;margin:0 auto">
+    <!-- Local Hire -->
+    <div class="reveal" style="background:rgba(255,255,255,.04);border:1.5px solid rgba(201,150,58,.3);border-radius:18px;padding:1.8rem;backdrop-filter:blur(16px)">
+      <div style="text-align:center;margin-bottom:1.3rem">
+        <div style="font-size:1.8rem;margin-bottom:.4rem">🇶🇦</div>
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:1.3rem;color:var(--gold2);letter-spacing:1px">Local Hire</div>
+        <div style="font-size:.72rem;color:var(--muted);margin-top:.15rem">Inside Qatar</div>
+      </div>
+      <div style="font-size:.75rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:rgba(201,150,58,.7);margin-bottom:.7rem">✨ Benefits</div>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:.45rem;margin-bottom:1.3rem">
+        <li style="display:flex;gap:.5rem;font-size:.78rem;color:rgba(255,255,255,.7)"><span style="color:var(--gold);flex-shrink:0">✓</span>2-year employment contract</li>
+        <li style="display:flex;gap:.5rem;font-size:.78rem;color:rgba(255,255,255,.7)"><span style="color:var(--gold);flex-shrink:0">✓</span>1 day off per week</li>
+        <li style="display:flex;gap:.5rem;font-size:.78rem;color:rgba(255,255,255,.7)"><span style="color:var(--gold);flex-shrink:0">✓</span>Paid annual leave (Qatar Labor Law)</li>
+        <li style="display:flex;gap:.5rem;font-size:.78rem;color:rgba(255,255,255,.7)"><span style="color:var(--gold);flex-shrink:0">✓</span>End-of-service benefits</li>
+        <li style="display:flex;gap:.5rem;font-size:.78rem;color:rgba(255,255,255,.7)"><span style="color:var(--gold);flex-shrink:0">✓</span>Freelance visa option available</li>
+        <li style="display:flex;gap:.5rem;font-size:.78rem;color:rgba(255,255,255,.7)"><span style="color:var(--gold);flex-shrink:0">✓</span>Basic salary + Food + Other allowances</li>
+        <li style="display:flex;gap:.5rem;font-size:.78rem;color:rgba(255,255,255,.7)"><span style="color:var(--gold);flex-shrink:0">✓</span>Company accommodation provided</li>
+        <li style="display:flex;gap:.5rem;font-size:.78rem;color:rgba(255,255,255,.7)"><span style="color:var(--gold);flex-shrink:0">✓</span>Transportation provided</li>
+      </ul>
+      <div style="border-top:1px solid rgba(255,255,255,.08);padding-top:1rem">
+        <div style="font-size:.75rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:rgba(201,150,58,.7);margin-bottom:.7rem">📋 Requirements</div>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:.4rem">
+          <li style="display:flex;gap:.5rem;font-size:.78rem;color:rgba(255,255,255,.7)"><span style="color:var(--cyan);flex-shrink:0">→</span>Filipino nationality</li>
+          <li style="display:flex;gap:.5rem;font-size:.78rem;color:rgba(255,255,255,.7)"><span style="color:var(--cyan);flex-shrink:0">→</span>Female applicants only</li>
+          <li style="display:flex;gap:.5rem;font-size:.78rem;color:rgba(255,255,255,.7)"><span style="color:var(--cyan);flex-shrink:0">→</span>1-2 years of experience</li>
+          <li style="display:flex;gap:.5rem;font-size:.78rem;color:rgba(255,255,255,.7)"><span style="color:var(--cyan);flex-shrink:0">→</span>Can join immediately</li>
+          <li style="display:flex;gap:.5rem;font-size:.78rem;color:rgba(255,255,255,.7)"><span style="color:var(--cyan);flex-shrink:0">→</span>Reliable and hardworking</li>
+        </ul>
+      </div>
+      <button onclick="applyOverseasWA('Local Hire - Inside Qatar')" style="width:100%;margin-top:1.3rem;padding:.85rem;background:linear-gradient(135deg,#25d366,#128c7e);border:none;border-radius:11px;color:#fff;font-size:.85rem;font-weight:700;cursor:pointer;font-family:'DM Sans',sans-serif;transition:opacity .2s">📲 Apply via WhatsApp</button>
+    </div>
+
+    <!-- Overseas -->
+    <div class="reveal" style="background:rgba(255,255,255,.04);border:1.5px solid rgba(0,180,216,.3);border-radius:18px;padding:1.8rem;backdrop-filter:blur(16px)">
+      <div style="text-align:center;margin-bottom:1.3rem">
+        <div style="font-size:1.8rem;margin-bottom:.4rem">🇵🇭</div>
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:1.3rem;color:var(--cyan2);letter-spacing:1px">Overseas Applicants</div>
+        <div style="font-size:.72rem;color:var(--muted);margin-top:.15rem">Philippines — Direct Hire</div>
+      </div>
+      <div style="font-size:.75rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:rgba(0,180,216,.7);margin-bottom:.7rem">✨ Benefits</div>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:.45rem;margin-bottom:1.3rem">
+        <li style="display:flex;gap:.5rem;font-size:.78rem;color:rgba(255,255,255,.7)"><span style="color:var(--cyan);flex-shrink:0">✓</span>Company-provided visa</li>
+        <li style="display:flex;gap:.5rem;font-size:.78rem;color:rgba(255,255,255,.7)"><span style="color:var(--cyan);flex-shrink:0">✓</span>Direct hire from Philippines</li>
+        <li style="display:flex;gap:.5rem;font-size:.78rem;color:rgba(255,255,255,.7)"><span style="color:var(--cyan);flex-shrink:0">✓</span>2-year employment contract</li>
+        <li style="display:flex;gap:.5rem;font-size:.78rem;color:rgba(255,255,255,.7)"><span style="color:var(--cyan);flex-shrink:0">✓</span>1 day off per week</li>
+        <li style="display:flex;gap:.5rem;font-size:.78rem;color:rgba(255,255,255,.7)"><span style="color:var(--cyan);flex-shrink:0">✓</span>Paid annual leave (Qatar Labor Law)</li>
+        <li style="display:flex;gap:.5rem;font-size:.78rem;color:rgba(255,255,255,.7)"><span style="color:var(--cyan);flex-shrink:0">✓</span>End-of-service benefits</li>
+        <li style="display:flex;gap:.5rem;font-size:.78rem;color:rgba(255,255,255,.7)"><span style="color:var(--cyan);flex-shrink:0">✓</span>Basic salary + Food + Other allowances</li>
+        <li style="display:flex;gap:.5rem;font-size:.78rem;color:rgba(255,255,255,.7)"><span style="color:var(--cyan);flex-shrink:0">✓</span>Company accommodation provided</li>
+        <li style="display:flex;gap:.5rem;font-size:.78rem;color:rgba(255,255,255,.7)"><span style="color:var(--cyan);flex-shrink:0">✓</span>Transportation provided</li>
+      </ul>
+      <div style="border-top:1px solid rgba(255,255,255,.08);padding-top:1rem">
+        <div style="font-size:.75rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:rgba(0,180,216,.7);margin-bottom:.7rem">📋 Requirements</div>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:.4rem">
+          <li style="display:flex;gap:.5rem;font-size:.78rem;color:rgba(255,255,255,.7)"><span style="color:var(--gold);flex-shrink:0">→</span>Filipino nationality</li>
+          <li style="display:flex;gap:.5rem;font-size:.78rem;color:rgba(255,255,255,.7)"><span style="color:var(--gold);flex-shrink:0">→</span>Female applicants only</li>
+          <li style="display:flex;gap:.5rem;font-size:.78rem;color:rgba(255,255,255,.7)"><span style="color:var(--gold);flex-shrink:0">→</span>1-2 years of experience</li>
+          <li style="display:flex;gap:.5rem;font-size:.78rem;color:rgba(255,255,255,.7)"><span style="color:var(--gold);flex-shrink:0">→</span>Can join immediately</li>
+          <li style="display:flex;gap:.5rem;font-size:.78rem;color:rgba(255,255,255,.7)"><span style="color:var(--gold);flex-shrink:0">→</span>Reliable and hardworking</li>
+          <li style="display:flex;gap:.5rem;font-size:.78rem;color:rgba(255,255,255,.7)"><span style="color:var(--gold);flex-shrink:0">→</span>Visa/placement fees discussed privately</li>
+        </ul>
+      </div>
+      <button onclick="applyOverseasWA('Overseas Applicant - Philippines')" style="width:100%;margin-top:1.3rem;padding:.85rem;background:linear-gradient(135deg,#25d366,#128c7e);border:none;border-radius:11px;color:#fff;font-size:.85rem;font-weight:700;cursor:pointer;font-family:'DM Sans',sans-serif;transition:opacity .2s">📲 Apply via WhatsApp</button>
+    </div>
+  </div>
+
+  <div style="text-align:center;margin-top:2.5rem">
+    <p style="color:var(--muted);font-size:.8rem;margin-bottom:1rem">Roles: <strong style="color:#fff">Female Cleaner</strong> &amp; <strong style="color:#fff">Housemaid</strong> · Full-Time Only</p>
+    <a href="#careers" style="display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 2rem;background:rgba(201,150,58,.15);border:1.5px solid rgba(201,150,58,.4);border-radius:100px;color:var(--gold2);font-weight:700;font-size:.85rem;text-decoration:none;transition:all .2s">💼 Also Apply via Full Form Below →</a>
   </div>
 </section>
 
@@ -693,7 +775,7 @@ footer{background:var(--black);color:var(--text);padding:3.5rem 3.5rem 2rem}
     </div>
     <div class="ft-col"><h4>Services</h4><ul><li><a href="#services">Residential Cleaning</a></li><li><a href="#services">Commercial Cleaning</a></li><li><a href="#homestaff">Housemaid Placement</a></li><li><a href="#homestaff">Nanny Placement</a></li></ul></div>
     <div class="ft-col"><h4>Company</h4><ul><li><a href="#why">About Us</a></li><li><a href="#reviews">Reviews</a></li><li><a href="#careers">Careers</a></li><li><a href="#quote">Get a Quote</a></li></ul></div>
-    <div class="ft-col"><h4>Contact — Qatar</h4><ul><li><a href="tel:+97450928969">+974 50928969</a></li><li><a href="tel:+97451354556">+974 51354556</a></li><li><a href="#">Doha, Qatar</a></li><li><a href="#">Sun–Thu: 7am – 7pm</a></li></ul></div>
+    <div class="ft-col"><h4>Contact — Qatar</h4><ul><li><a href="tel:+97450928969">+974 50928969</a></li><li><a href="#">Doha, Qatar</a></li><li><a href="#">Sun–Thu: 7am – 7pm</a></li></ul></div>
   </div>
   <div class="ft-bot">
     <span>© 2025 Santro Doha Cleaning. All rights reserved.</span>
@@ -770,9 +852,120 @@ footer{background:var(--black);color:var(--text);padding:3.5rem 3.5rem 2rem}
   </div>
 </div>
 
+<!-- BOOK MODAL -->
+<div class="lst-ov" id="modal-book" onclick="closeMdOut(event,'book')">
+  <div class="lst-modal" onclick="event.stopPropagation()" style="max-width:480px">
+    <div class="lst-hdr">
+      <div><div class="lst-title">🏠 Book a Service</div><div class="lst-sub">Fill in your details — we confirm via WhatsApp</div></div>
+      <button class="lst-x" onclick="closeModal('book')">✕</button>
+    </div>
+    <div class="lst-body">
+      <div class="f-group"><label class="f-lbl">Full Name</label><input class="f-inp" id="mbName" placeholder="Your full name"/></div>
+      <div class="f-group"><label class="f-lbl">Phone / WhatsApp</label><input class="f-inp" id="mbPhone" placeholder="+974 XXXX XXXX"/></div>
+      <div class="f-group"><label class="f-lbl">Service Needed</label><select class="f-sel" id="mbService"><option value="">Select...</option><option>Housemaid — Live-In</option><option>Housemaid — Live-Out</option><option>Nanny — Live-In</option><option>Nanny — Live-Out</option><option>Residential Cleaning</option><option>Commercial Cleaning</option></select></div>
+      <div class="f-group"><label class="f-lbl">Location in Qatar</label><input class="f-inp" id="mbLoc" placeholder="e.g. West Bay, Lusail..."/></div>
+      <div class="f-group"><label class="f-lbl">Preferred Start Date</label><input class="f-inp" id="mbDate" type="date"/></div>
+      <div class="f-group"><label class="f-lbl">Additional Notes</label><textarea class="f-txt" id="mbNotes" placeholder="Any special requirements..."></textarea></div>
+      <button class="f-sub" onclick="sendBookingWA()">📲 Send Booking via WhatsApp</button>
+    </div>
+  </div>
+</div>
+
+<!-- QUOTE MODAL -->
+<div class="lst-ov" id="modal-quote" onclick="closeMdOut(event,'quote')">
+  <div class="lst-modal" onclick="event.stopPropagation()" style="max-width:480px">
+    <div class="lst-hdr">
+      <div><div class="lst-title">💬 Get Free Quote</div><div class="lst-sub">We reply on WhatsApp within minutes</div></div>
+      <button class="lst-x" onclick="closeModal('quote')">✕</button>
+    </div>
+    <div class="lst-body">
+      <div class="f-group"><label class="f-lbl">Your Name</label><input class="f-inp" id="mqName" placeholder="e.g. Ahmed Al-Mansouri"/></div>
+      <div class="f-group"><label class="f-lbl">Phone / WhatsApp</label><input class="f-inp" id="mqPhone" placeholder="+974 XXXX XXXX"/></div>
+      <div class="f-group"><label class="f-lbl">Service Needed</label><select class="f-sel" id="mqService"><option value="">Select service...</option><option>Housemaid — Live-In</option><option>Housemaid — Live-Out</option><option>Nanny — Live-In</option><option>Nanny — Live-Out</option><option>Residential Cleaning</option><option>Commercial Cleaning</option></select></div>
+      <div class="f-group"><label class="f-lbl">Location in Qatar</label><select class="f-sel" id="mqLoc"><option value="">Select area...</option><option>Doha</option><option>West Bay</option><option>The Pearl</option><option>Lusail City</option><option>Al Rayyan</option><option>Al Wakrah</option><option>Al Khor</option><option>Al Daayen</option><option>Umm Salal</option><option>Other</option></select></div>
+      <div class="f-group"><label class="f-lbl">Special Requests (Optional)</label><textarea class="f-txt" id="mqNotes" placeholder="e.g. 3 children, villa, need cooking included..."></textarea></div>
+      <button class="f-sub" style="background:linear-gradient(135deg,rgba(0,119,182,.5),rgba(0,180,216,.35));border:1.5px solid rgba(0,180,216,.55)" onclick="sendQuoteMdWA()">📲 Send to WhatsApp & Get My Free Quote →</button>
+    </div>
+  </div>
+</div>
+
+<!-- APPLY MODAL -->
+<div class="lst-ov" id="modal-apply" onclick="closeMdOut(event,'apply')">
+  <div class="lst-modal" onclick="event.stopPropagation()" style="max-width:520px">
+    <div class="lst-hdr">
+      <div><div class="lst-title">💼 Join Our Team</div><div class="lst-sub">Full-Time · Housemaid &amp; Nanny roles · Qatar</div></div>
+      <button class="lst-x" onclick="closeModal('apply')">✕</button>
+    </div>
+    <div class="lst-body">
+      <!-- Tabs: Local / Overseas -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--border);margin-bottom:1.3rem">
+        <div id="atab-local" onclick="applyTab('local')" style="padding:.85rem;text-align:center;cursor:pointer;font-size:.8rem;font-weight:700;color:#7ae89a;border-bottom:2px solid #25d366;background:rgba(37,211,102,.06)">🇶🇦 Local Hire</div>
+        <div id="atab-overseas" onclick="applyTab('overseas')" style="padding:.85rem;text-align:center;cursor:pointer;font-size:.8rem;font-weight:700;color:var(--muted);border-bottom:2px solid transparent">🇵🇭 Overseas (Philippines)</div>
+      </div>
+      <div id="apan-local">
+        <div style="background:rgba(37,211,102,.07);border:1px solid rgba(37,211,102,.2);border-radius:10px;padding:.9rem;margin-bottom:1.1rem;font-size:.78rem;color:rgba(255,255,255,.7);line-height:1.6">✓ 2-yr contract &nbsp;·&nbsp; ✓ 1 day off/week &nbsp;·&nbsp; ✓ Company accommodation &nbsp;·&nbsp; ✓ Transport provided &nbsp;·&nbsp; ✓ Food allowance</div>
+        <div class="f-group"><label class="f-lbl">Full Name</label><input class="f-inp" id="alName" placeholder="Your full name"/></div>
+        <div class="f-group"><label class="f-lbl">Role Applying For</label><select class="f-sel" id="alRole"><option value="">Select...</option><option>Housemaid</option><option>Nanny</option><option>Female Cleaner</option></select></div>
+        <div class="f-group"><label class="f-lbl">Experience</label><select class="f-sel" id="alExp"><option value="">Select...</option><option>No experience (willing to train)</option><option>1-2 years</option><option>3-5 years</option><option>5+ years</option></select></div>
+        <div class="f-group"><label class="f-lbl">Current Location in Qatar</label><input class="f-inp" id="alLoc" placeholder="e.g. Doha, Al Rayyan..."/></div>
+        <div class="f-group"><label class="f-lbl">Phone / WhatsApp</label><input class="f-inp" id="alPhone" placeholder="+974 XXXX XXXX"/></div>
+        <button class="f-sub" onclick="sendApplyMdWA('local')">📲 Apply via WhatsApp</button>
+      </div>
+      <div id="apan-overseas" style="display:none">
+        <div style="background:rgba(0,180,216,.07);border:1px solid rgba(0,180,216,.2);border-radius:10px;padding:.9rem;margin-bottom:1.1rem;font-size:.78rem;color:rgba(255,255,255,.7);line-height:1.6">✓ Company visa provided &nbsp;·&nbsp; ✓ Direct hire from Philippines &nbsp;·&nbsp; ✓ 2-yr contract &nbsp;·&nbsp; ✓ Company accommodation &nbsp;·&nbsp; ✓ Transport &amp; allowances</div>
+        <div class="f-group"><label class="f-lbl">Full Name</label><input class="f-inp" id="aoName" placeholder="Your full name"/></div>
+        <div class="f-group"><label class="f-lbl">Role Applying For</label><select class="f-sel" id="aoRole"><option value="">Select...</option><option>Housemaid</option><option>Nanny</option><option>Female Cleaner</option></select></div>
+        <div class="f-group"><label class="f-lbl">Experience</label><select class="f-sel" id="aoExp"><option value="">Select...</option><option>No experience (willing to train)</option><option>1-2 years</option><option>3-5 years</option><option>5+ years</option></select></div>
+        <div class="f-group"><label class="f-lbl">Current Location (Philippines)</label><input class="f-inp" id="aoLoc" placeholder="e.g. Manila, Cebu, Davao..."/></div>
+        <div class="f-group"><label class="f-lbl">Phone / WhatsApp</label><input class="f-inp" id="aoPhone" placeholder="+63 XXXX XXXX"/></div>
+        <button class="f-sub" onclick="sendApplyMdWA('overseas')">📲 Apply via WhatsApp</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script>
 document.body.classList.add('js-ready');
 var WA='97450928969';
+
+// Generic modals
+function openModal(id){document.getElementById('modal-'+id).classList.add('open');document.body.style.overflow='hidden'}
+function closeModal(id){document.getElementById('modal-'+id).classList.remove('open');document.body.style.overflow=''}
+function closeMdOut(e,id){if(e.target===document.getElementById('modal-'+id))closeModal(id)}
+
+// Apply tab
+function applyTab(t){
+  document.getElementById('apan-local').style.display=t==='local'?'block':'none';
+  document.getElementById('apan-overseas').style.display=t==='overseas'?'block':'none';
+  var loc=document.getElementById('atab-local'),ov=document.getElementById('atab-overseas');
+  if(t==='local'){loc.style.color='#7ae89a';loc.style.borderBottom='2px solid #25d366';loc.style.background='rgba(37,211,102,.06)';ov.style.color='var(--muted)';ov.style.borderBottom='2px solid transparent';ov.style.background='transparent'}
+  else{ov.style.color=`var(--cyan2)`;ov.style.borderBottom='2px solid var(--cyan)';ov.style.background='rgba(0,180,216,.06)';loc.style.color='var(--muted)';loc.style.borderBottom='2px solid transparent';loc.style.background='transparent'}
+}
+
+// Quote modal WA
+function sendQuoteMdWA(){
+  var n=document.getElementById('mqName').value.trim(),p=document.getElementById('mqPhone').value.trim(),s=document.getElementById('mqService').value,l=document.getElementById('mqLoc').value,nt=document.getElementById('mqNotes').value.trim();
+  var m='Hello Santro Doha! I would like a *FREE QUOTE* 🧹';
+  if(n)m+='%0A%0A👤 *Name:* '+enc(n);if(p)m+='%0A📱 *Phone:* '+enc(p);if(s)m+='%0A🧹 *Service:* '+enc(s);if(l)m+='%0A📍 *Location:* '+enc(l);if(nt)m+='%0A📝 *Notes:* '+enc(nt);
+  m+='%0A%0APlease send me your best price. Thank you! 🇶🇦';
+  window.open('https://wa.me/'+WA+'?text='+m,'_blank');closeModal('quote');
+}
+
+// Apply modal WA
+function sendApplyMdWA(type){
+  var isLocal=type==='local';
+  var n=document.getElementById(isLocal?'alName':'aoName').value.trim();
+  var r=document.getElementById(isLocal?'alRole':'aoRole').value;
+  var e=document.getElementById(isLocal?'alExp':'aoExp').value;
+  var l=document.getElementById(isLocal?'alLoc':'aoLoc').value.trim();
+  var p=document.getElementById(isLocal?'alPhone':'aoPhone').value.trim();
+  var m='Hello Santro Doha! I would like to *APPLY* — '+(isLocal?'*Local Hire (Qatar)*':'*Overseas Applicant (Philippines)*');
+  if(n)m+='%0A%0A👤 *Name:* '+enc(n);
+  m+='%0A🌍 *Nationality:* Filipino';
+  if(r)m+='%0A💼 *Role:* '+enc(r);if(e)m+='%0A📋 *Experience:* '+enc(e);if(l)m+='%0A📍 *Location:* '+enc(l);if(p)m+='%0A📱 *Phone:* '+enc(p);
+  m+='%0A%0APlease consider my application. Thank you! 🙏';
+  window.open('https://wa.me/'+WA+'?text='+m,'_blank');closeModal('apply');
+}
 
 // Scroll reveals
 var obs=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)e.target.classList.add('visible')})},{threshold:.1});
@@ -842,18 +1035,12 @@ function sendQuoteWA(){
   window.open('https://wa.me/'+WA+'?text='+m,'_blank');
 }
 
-// Booking WA
 function sendBookingWA(){
-  var n=document.getElementById('bName').value.trim(),p=document.getElementById('bPhone').value.trim(),s=document.getElementById('bService').value,l=document.getElementById('bLoc').value.trim(),d=document.getElementById('bDate').value,nt=document.getElementById('bNotes').value.trim();
+  var n=document.getElementById('mbName').value.trim(),p=document.getElementById('mbPhone').value.trim(),s=document.getElementById('mbService').value,l=document.getElementById('mbLoc').value.trim(),d=document.getElementById('mbDate').value,nt=document.getElementById('mbNotes').value.trim();
   var m='Hello Santro Doha! I would like to *BOOK* a service 📅';
-  if(n)m+='%0A%0A👤 *Name:* '+enc(n);
-  if(p)m+='%0A📱 *Phone:* '+enc(p);
-  if(s)m+='%0A🧹 *Service:* '+enc(s);
-  if(l)m+='%0A📍 *Location:* '+enc(l);
-  if(d)m+='%0A📅 *Start Date:* '+enc(d);
-  if(nt)m+='%0A📝 *Notes:* '+enc(nt);
+  if(n)m+='%0A%0A👤 *Name:* '+enc(n);if(p)m+='%0A📱 *Phone:* '+enc(p);if(s)m+='%0A🧹 *Service:* '+enc(s);if(l)m+='%0A📍 *Location:* '+enc(l);if(d)m+='%0A📅 *Start Date:* '+enc(d);if(nt)m+='%0A📝 *Notes:* '+enc(nt);
   m+='%0A%0APlease confirm availability. Thank you! 🇶🇦';
-  window.open('https://wa.me/'+WA+'?text='+m,'_blank');
+  window.open('https://wa.me/'+WA+'?text='+m,'_blank');closeModal('book');
 }
 
 // Apply WA
@@ -952,6 +1139,10 @@ function renderListing(type){
         '<a href="'+(item.link||'#')+'" class="lst-ibtn" style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.6)" onclick="closeListing(''+type+'')">← Back to Website</a>'+
       '</div></div>';
   }).join('');
+}
+function applyOverseasWA(type){
+  var m='Hello Santro Doha! I would like to apply for the *HIRING* position.%0A%0A📋 *Application Type:* '+enc(type)+'%0A🌍 *Nationality:* Filipino%0A%0APlease let me know the next steps. Thank you! 🙏';
+  window.open('https://wa.me/97450928969?text='+m,'_blank');
 }
 function applyJob(title){
   var t=decodeURIComponent(title);
