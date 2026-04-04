@@ -1,4 +1,4 @@
-const CACHE = 'oblin-group-v1';
+const CACHE = 'azure-breeze-v1';
 const ASSETS = [
   '/cleaning-company-website.html',
   '/elite-admin-panel.html',
